@@ -19,20 +19,20 @@ html{
 }
 
 body{
-    background:#f5f7f4;
+    background:#f4f8f4;
     color:#222;
 }
 
 header{
-    background:#174d2a;
+    background:#075b35;
     color:white;
     text-align:center;
-    padding:28px 15px;
+    padding:25px 15px;
 }
 
 header h1{
     font-size:30px;
-    margin-bottom:8px;
+    margin-bottom:7px;
 }
 
 header p{
@@ -40,9 +40,9 @@ header p{
 }
 
 nav{
-    background:#0d321a;
+    background:#043d24;
+    padding:14px 5px;
     text-align:center;
-    padding:13px 5px;
     position:sticky;
     top:0;
     z-index:100;
@@ -51,28 +51,41 @@ nav{
 nav a{
     color:white;
     text-decoration:none;
+    font-weight:bold;
     margin:0 8px;
     font-size:14px;
-    font-weight:bold;
 }
 
 .hero{
+    min-height:430px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     text-align:center;
-    padding:65px 20px;
-    background:linear-gradient(135deg,#dff0df,#ffffff);
+    padding:50px 20px;
+    background:
+    linear-gradient(rgba(0,70,35,.25),rgba(0,70,35,.25)),
+    url("https://loremflickr.com/1600/700/cow,goat,farm");
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
+
+.hero-box{
+    background:rgba(0,50,25,.72);
+    padding:35px 25px;
+    border-radius:18px;
+    max-width:800px;
 }
 
 .hero h2{
-    color:#174d2a;
-    font-size:34px;
+    font-size:38px;
     margin-bottom:15px;
 }
 
 .hero p{
-    max-width:750px;
-    margin:auto;
+    font-size:18px;
     line-height:1.8;
-    font-size:16px;
 }
 
 .buttons{
@@ -81,7 +94,7 @@ nav a{
 
 .btn{
     display:inline-block;
-    padding:13px 23px;
+    padding:13px 24px;
     margin:5px;
     border-radius:8px;
     text-decoration:none;
@@ -90,59 +103,75 @@ nav a{
 }
 
 .whatsapp{
-    background:#168c45;
+    background:#16a34a;
 }
 
 .call{
-    background:#174d2a;
+    background:#075b35;
 }
 
 section{
-    max-width:1150px;
+    max-width:1200px;
     margin:auto;
-    padding:45px 18px;
+    padding:50px 18px;
 }
 
 .section-title{
     text-align:center;
-    color:#174d2a;
-    font-size:28px;
-    margin-bottom:30px;
+    color:#075b35;
+    font-size:30px;
+    margin-bottom:35px;
 }
 
 .cards{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
+    gap:22px;
 }
 
 .card{
     background:white;
-    padding:25px 18px;
-    border-radius:14px;
-    text-align:center;
-    box-shadow:0 4px 14px rgba(0,0,0,.10);
-    transition:.2s;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 18px rgba(0,0,0,.12);
+    transition:.25s;
 }
 
 .card:hover{
-    transform:translateY(-4px);
+    transform:translateY(-5px);
 }
 
-.icon{
-    font-size:45px;
-    margin-bottom:12px;
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    display:block;
+}
+
+.card-content{
+    padding:18px;
+    text-align:center;
 }
 
 .card h3{
-    color:#174d2a;
-    margin-bottom:10px;
+    color:#075b35;
     font-size:19px;
+    margin-bottom:8px;
 }
 
 .card p{
-    line-height:1.7;
     font-size:14px;
+    line-height:1.6;
+}
+
+.feed{
+    background:#eaf5eb;
+    max-width:none;
+}
+
+.feed-inner{
+    max-width:1200px;
+    margin:auto;
 }
 
 .about{
@@ -152,13 +181,14 @@ section{
 }
 
 .about p{
-    max-width:800px;
+    max-width:850px;
     margin:auto;
     line-height:1.9;
+    font-size:16px;
 }
 
 .contact{
-    background:#174d2a;
+    background:#075b35;
     color:white;
     max-width:none;
     text-align:center;
@@ -166,6 +196,7 @@ section{
 
 .contact h2{
     margin-bottom:15px;
+    font-size:28px;
 }
 
 .contact p{
@@ -173,7 +204,7 @@ section{
 }
 
 footer{
-    background:#0d321a;
+    background:#043d24;
     color:white;
     text-align:center;
     padding:22px 15px;
@@ -186,17 +217,30 @@ footer{
         font-size:24px;
     }
 
-    .hero{
-        padding:50px 15px;
-    }
-
-    .hero h2{
-        font-size:27px;
-    }
-
     nav a{
         display:inline-block;
         margin:5px 6px;
+    }
+
+    .hero{
+        min-height:480px;
+        padding:30px 15px;
+    }
+
+    .hero h2{
+        font-size:28px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .hero-box{
+        padding:28px 18px;
+    }
+
+    .card img{
+        height:210px;
     }
 }
 </style>
@@ -218,26 +262,31 @@ footer{
     <a href="#contact">Contact</a>
 </nav>
 
+
 <section class="hero" id="home">
 
-    <h2>Ali Cattle and Goat Farms</h2>
+    <div class="hero-box">
 
-    <p>
-        Quality livestock, healthy animals and reliable service.
-        We deal in goats, bakray, cattle, bulls, buffalo and quality animal feed.
-    </p>
+        <h2>Ali Cattle and Goat Farms</h2>
 
-    <div class="buttons">
+        <p>
+            Quality livestock, healthy animals and reliable service.
+            Goats, Bakray, Cattle, Bulls, Buffalo and Quality Animal Feed.
+        </p>
 
-        <a class="btn whatsapp"
-        href="https://wa.me/923002098270">
-        WhatsApp
-        </a>
+        <div class="buttons">
 
-        <a class="btn call"
-        href="tel:+923002098270">
-        Call Now
-        </a>
+            <a class="btn whatsapp"
+            href="https://wa.me/923002098270">
+            WhatsApp
+            </a>
+
+            <a class="btn call"
+            href="tel:+923002098270">
+            Call Now
+            </a>
+
+        </div>
 
     </div>
 
@@ -246,166 +295,196 @@ footer{
 
 <section id="goats">
 
-    <h2 class="section-title">Goats & Bakray</h2>
+<h2 class="section-title">🐐 Goats & Bakray</h2>
 
-    <div class="cards">
+<div class="cards">
 
-        <div class="card">
-            <div class="icon">🐐</div>
-            <h3>Barbari Goats</h3>
-            <p>Barbari breed goats and bakray.</p>
-        </div>
+<div class="card">
+<img src="https://loremflickr.com/700/500/barbari,goat" alt="Barbari Goat">
+<div class="card-content">
+<h3>Barbari Goats</h3>
+<p>Barbari breed goats and bakray.</p>
+</div>
+</div>
 
-        <div class="card">
-            <div class="icon">🐐</div>
-            <h3>Hasilpuri Goats</h3>
-            <p>Healthy Hasilpuri breed animals.</p>
-        </div>
+<div class="card">
+<img src="https://loremflickr.com/700/500/white,goat" alt="Hasilpuri Goat">
+<div class="card-content">
+<h3>Hasilpuri Goats</h3>
+<p>Healthy Hasilpuri breed animals.</p>
+</div>
+</div>
 
-        <div class="card">
-            <div class="icon">🐐</div>
-            <h3>Makhi Cheeni</h3>
-            <p>Makhi Cheeni goats and bakray.</p>
-        </div>
+<div class="card">
+<img src="https://loremflickr.com/700/500/spotted,goat" alt="Makhi Cheeni Goat">
+<div class="card-content">
+<h3>Makhi Cheeni</h3>
+<p>Makhi Cheeni goats and bakray.</p>
+</div>
+</div>
 
-        <div class="card">
-            <div class="icon">🐐</div>
-            <h3>Russian Goats</h3>
-            <p>Selected Russian breed goats.</p>
-        </div>
+<div class="card">
+<img src="https://loremflickr.com/700/500/black,white,goat" alt="Russian Goat">
+<div class="card-content">
+<h3>Russian Goats</h3>
+<p>Selected Russian breed goats.</p>
+</div>
+</div>
 
-        <div class="card">
-            <div class="icon">🐐</div>
-            <h3>Teddy Goats</h3>
-            <p>Teddy goats and bakray.</p>
-        </div>
+<div class="card">
+<img src="https://loremflickr.com/700/500/teddy,goat" alt="Teddy Goat">
+<div class="card-content">
+<h3>Teddy Goats</h3>
+<p>Teddy goats and bakray.</p>
+</div>
+</div>
 
-        <div class="card">
-            <div class="icon">🐐</div>
-            <h3>Rajan Puri Goats</h3>
-            <p>Rajan Puri breed goats and bakray.</p>
-        </div>
+<div class="card">
+<img src="https://loremflickr.com/700/500/long,ear,goat" alt="Rajan Puri Goat">
+<div class="card-content">
+<h3>Rajan Puri Goats</h3>
+<p>Rajan Puri breed goats and bakray.</p>
+</div>
+</div>
 
-    </div>
-
+</div>
 </section>
 
 
 <section id="cattle">
 
-    <h2 class="section-title">Cattle, Bulls & Buffalo</h2>
+<h2 class="section-title">🐄 Cattle, Bulls & Buffalo</h2>
 
-    <div class="cards">
+<div class="cards">
 
-        <div class="card">
-            <div class="icon">🐄</div>
-            <h3>Cholistani Cows</h3>
-            <p>Cholistani cows and selected cattle.</p>
-        </div>
+<div class="card">
+<img src="https://loremflickr.com/700/500/cholistani,cow" alt="Cholistani Cow">
+<div class="card-content">
+<h3>Cholistani Cows</h3>
+<p>Cholistani cows and selected cattle.</p>
+</div>
+</div>
 
-        <div class="card">
-            <div class="icon">🐄</div>
-            <h3>Friesian</h3>
-            <p>Friesian and Holstein Friesian cattle.</p>
-        </div>
+<div class="card">
+<img src="https://loremflickr.com/700/500/holstein,cow" alt="Friesian Cow">
+<div class="card-content">
+<h3>Friesian</h3>
+<p>Friesian and Holstein Friesian cattle.</p>
+</div>
+</div>
 
-        <div class="card">
-            <div class="icon">🐄</div>
-            <h3>Australian Cattle</h3>
-            <p>Australian cattle and selected animals.</p>
-        </div>
+<div class="card">
+<img src="https://loremflickr.com/700/500/australian,cattle" alt="Australian Cattle">
+<div class="card-content">
+<h3>Australian Cattle</h3>
+<p>Australian cattle and selected animals.</p>
+</div>
+</div>
 
-        <div class="card">
-            <div class="icon">🐄</div>
-            <h3>Sahiwal</h3>
-            <p>Sahiwal breed cattle.</p>
-        </div>
+<div class="card">
+<img src="https://loremflickr.com/700/500/sahiwal,cow" alt="Sahiwal Cow">
+<div class="card-content">
+<h3>Sahiwal</h3>
+<p>Sahiwal breed cattle.</p>
+</div>
+</div>
 
-        <div class="card">
-            <div class="icon">🐂</div>
-            <h3>Bulls</h3>
-            <p>Healthy and strong bulls of different breeds.</p>
-        </div>
+<div class="card">
+<img src="https://loremflickr.com/700/500/bull,cattle" alt="Bull">
+<div class="card-content">
+<h3>Bulls</h3>
+<p>Healthy and strong bulls of different breeds.</p>
+</div>
+</div>
 
-        <div class="card">
-            <div class="icon">🐃</div>
-            <h3>Buffalo</h3>
-            <p>Nili-Ravi, Kundhi and other buffalo breeds.</p>
-        </div>
+<div class="card">
+<img src="https://loremflickr.com/700/500/buffalo" alt="Buffalo">
+<div class="card-content">
+<h3>Nili-Ravi & Kundhi Buffalo</h3>
+<p>Nili-Ravi, Kundhi and other buffalo breeds.</p>
+</div>
+</div>
 
-    </div>
-
+</div>
 </section>
 
 
-<section id="feed">
+<section class="feed" id="feed">
 
-    <h2 class="section-title">Animal Feed</h2>
+<div class="feed-inner">
 
-    <div class="cards">
+<h2 class="section-title">🌾 Animal Feed</h2>
 
-        <div class="card">
-            <div class="icon">🌾</div>
-            <h3>Calf Starter</h3>
-            <p>
-                Quality starter feed for young calves and early growth.
-            </p>
-        </div>
+<div class="cards">
 
-        <div class="card">
-            <div class="icon">🌾</div>
-            <h3>Goat Kids Starter</h3>
-            <p>
-                Starter feed for goat kids and healthy early development.
-            </p>
-        </div>
+<div class="card">
+<img src="https://loremflickr.com/700/500/calf,feed" alt="Calf Starter">
+<div class="card-content">
+<h3>Calf Starter</h3>
+<p>
+Quality starter feed for young calves and early growth.
+</p>
+</div>
+</div>
 
-    </div>
+<div class="card">
+<img src="https://loremflickr.com/700/500/goat,kids,feed" alt="Goat Kids Starter">
+<div class="card-content">
+<h3>Goat Kids Starter</h3>
+<p>
+Starter feed for goat kids and healthy early development.
+</p>
+</div>
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
 <section class="about" id="about">
 
-    <h2 class="section-title">About Us</h2>
+<h2 class="section-title">About Us</h2>
 
-    <p>
-        Ali Cattle and Goat Farms is focused on healthy livestock,
-        quality animal feed and reliable livestock services.
-        We deal in goats, bakray, cows, bulls, buffalo and different breeds.
-    </p>
+<p>
+Ali Cattle and Goat Farms is focused on healthy livestock,
+quality animal feed and reliable livestock services.
+We deal in goats, bakray, cows, bulls, buffalo and different breeds.
+</p>
 
 </section>
 
 
 <section class="contact" id="contact">
 
-    <h2>Contact Ali Cattle and Goat Farms</h2>
+<h2>Contact Ali Cattle and Goat Farms</h2>
 
-    <p>
-        For animals, feed and livestock information, contact us.
-    </p>
+<p>
+For animals, feed and livestock information, contact us.
+</p>
 
-    <div class="buttons">
+<div class="buttons">
 
-        <a class="btn whatsapp"
-        href="https://wa.me/923002098270">
-        WhatsApp
-        </a>
+<a class="btn whatsapp"
+href="https://wa.me/923002098270">
+WhatsApp
+</a>
 
-        <a class="btn call"
-        href="tel:+923002098270">
-        Call Now
-        </a>
+<a class="btn call"
+href="tel:+923002098270">
+Call Now
+</a>
 
-    </div>
+</div>
 
 </section>
 
 
 <footer>
 
-    © 2026 Ali Cattle and Goat Farms — All Rights Reserved
+© 2026 Ali Cattle and Goat Farms — All Rights Reserved
 
 </footer>
 
