@@ -3,14 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Ali Cattle and Goat Farms</title>
 
 <style>
 *{
-    box-sizing:border-box;
     margin:0;
     padding:0;
-    font-family:Arial, sans-serif;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
@@ -21,12 +26,12 @@ body{
 header{
     background:#174d2a;
     color:white;
-    padding:20px 15px;
     text-align:center;
+    padding:28px 15px;
 }
 
 header h1{
-    font-size:28px;
+    font-size:30px;
     margin-bottom:8px;
 }
 
@@ -35,12 +40,12 @@ header p{
 }
 
 nav{
-    background:#0e351c;
-    padding:12px;
+    background:#0d321a;
     text-align:center;
+    padding:13px 5px;
     position:sticky;
     top:0;
-    z-index:10;
+    z-index:100;
 }
 
 nav a{
@@ -48,24 +53,26 @@ nav a{
     text-decoration:none;
     margin:0 8px;
     font-size:14px;
+    font-weight:bold;
 }
 
 .hero{
-    padding:55px 20px;
     text-align:center;
-    background:linear-gradient(135deg,#dcefdc,#f8f8f8);
+    padding:65px 20px;
+    background:linear-gradient(135deg,#dff0df,#ffffff);
 }
 
 .hero h2{
-    font-size:30px;
     color:#174d2a;
+    font-size:34px;
     margin-bottom:15px;
 }
 
 .hero p{
-    max-width:700px;
+    max-width:750px;
     margin:auto;
-    line-height:1.7;
+    line-height:1.8;
+    font-size:16px;
 }
 
 .buttons{
@@ -74,7 +81,7 @@ nav a{
 
 .btn{
     display:inline-block;
-    padding:12px 20px;
+    padding:13px 23px;
     margin:5px;
     border-radius:8px;
     text-decoration:none;
@@ -83,7 +90,7 @@ nav a{
 }
 
 .whatsapp{
-    background:#159447;
+    background:#168c45;
 }
 
 .call{
@@ -91,73 +98,105 @@ nav a{
 }
 
 section{
-    padding:40px 15px;
-    max-width:1100px;
+    max-width:1150px;
     margin:auto;
+    padding:45px 18px;
 }
 
 .section-title{
     text-align:center;
     color:#174d2a;
-    margin-bottom:25px;
-    font-size:26px;
+    font-size:28px;
+    margin-bottom:30px;
 }
 
 .cards{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:18px;
+    gap:20px;
 }
 
 .card{
     background:white;
-    padding:22px;
-    border-radius:12px;
-    box-shadow:0 3px 12px rgba(0,0,0,.10);
+    padding:25px 18px;
+    border-radius:14px;
     text-align:center;
+    box-shadow:0 4px 14px rgba(0,0,0,.10);
+    transition:.2s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+}
+
+.icon{
+    font-size:45px;
+    margin-bottom:12px;
 }
 
 .card h3{
     color:#174d2a;
     margin-bottom:10px;
+    font-size:19px;
 }
 
 .card p{
-    line-height:1.6;
+    line-height:1.7;
     font-size:14px;
+}
+
+.about{
+    background:white;
+    max-width:none;
+    text-align:center;
+}
+
+.about p{
+    max-width:800px;
+    margin:auto;
+    line-height:1.9;
 }
 
 .contact{
     background:#174d2a;
     color:white;
-    text-align:center;
     max-width:none;
+    text-align:center;
 }
 
 .contact h2{
     margin-bottom:15px;
 }
 
+.contact p{
+    line-height:1.8;
+}
+
 footer{
-    background:#0e351c;
+    background:#0d321a;
     color:white;
     text-align:center;
-    padding:20px;
+    padding:22px 15px;
     font-size:13px;
 }
 
 @media(max-width:600px){
+
     header h1{
-        font-size:23px;
+        font-size:24px;
+    }
+
+    .hero{
+        padding:50px 15px;
     }
 
     .hero h2{
-        font-size:24px;
+        font-size:27px;
     }
 
     nav a{
         display:inline-block;
-        margin:5px;
+        margin:5px 6px;
     }
 }
 </style>
@@ -175,143 +214,199 @@ footer{
     <a href="#goats">Goats</a>
     <a href="#cattle">Cattle</a>
     <a href="#feed">Feed</a>
+    <a href="#about">About</a>
     <a href="#contact">Contact</a>
 </nav>
 
 <section class="hero" id="home">
-    <h2>Welcome to Ali Cattle and Goat Farms</h2>
+
+    <h2>Ali Cattle and Goat Farms</h2>
+
     <p>
-        بکری، بھیڑ، گائے، بیل اور بھینس کی خرید و فروخت۔
-        صحت مند جانور، معیاری خوراک اور قابلِ اعتماد خدمت۔
+        Quality livestock, healthy animals and reliable service.
+        We deal in goats, bakray, cattle, bulls, buffalo and quality animal feed.
     </p>
 
     <div class="buttons">
-        <a class="btn whatsapp" href="https://wa.me/923002098270">
-            WhatsApp
+
+        <a class="btn whatsapp"
+        href="https://wa.me/923002098270">
+        WhatsApp
         </a>
 
-        <a class="btn call" href="tel:+923002098270">
-            Call Now
+        <a class="btn call"
+        href="tel:+923002098270">
+        Call Now
         </a>
+
     </div>
+
 </section>
 
+
 <section id="goats">
+
     <h2 class="section-title">Goats & Bakray</h2>
 
     <div class="cards">
 
         <div class="card">
+            <div class="icon">🐐</div>
             <h3>Barbari Goats</h3>
-            <p>صحت مند اور اچھی نسل کی باربری بکریاں اور بکرے۔</p>
+            <p>Barbari breed goats and bakray.</p>
         </div>
 
         <div class="card">
+            <div class="icon">🐐</div>
             <h3>Hasilpuri Goats</h3>
-            <p>حاصل پوری نسل کے معیاری جانور۔</p>
+            <p>Healthy Hasilpuri breed animals.</p>
         </div>
 
         <div class="card">
+            <div class="icon">🐐</div>
             <h3>Makhi Cheeni</h3>
-            <p>مکھی چینی بکریاں اور بکرے۔</p>
+            <p>Makhi Cheeni goats and bakray.</p>
         </div>
 
         <div class="card">
+            <div class="icon">🐐</div>
             <h3>Russian Goats</h3>
-            <p>روسی نسل کے منتخب جانور۔</p>
+            <p>Selected Russian breed goats.</p>
         </div>
 
         <div class="card">
+            <div class="icon">🐐</div>
             <h3>Teddy Goats</h3>
-            <p>ٹیڈی بکریاں اور بکرے، مختلف عمر اور سائز میں۔</p>
+            <p>Teddy goats and bakray.</p>
         </div>
 
         <div class="card">
+            <div class="icon">🐐</div>
             <h3>Rajan Puri Goats</h3>
-            <p>راجن پوری نسل کے صحت مند جانور۔</p>
+            <p>Rajan Puri breed goats and bakray.</p>
         </div>
 
     </div>
+
 </section>
+
 
 <section id="cattle">
-    <h2 class="section-title">Cattle & Buffalo</h2>
+
+    <h2 class="section-title">Cattle, Bulls & Buffalo</h2>
 
     <div class="cards">
 
         <div class="card">
+            <div class="icon">🐄</div>
             <h3>Cholistani Cows</h3>
-            <p>چولستانی گائیں اور منتخب جانور۔</p>
+            <p>Cholistani cows and selected cattle.</p>
         </div>
 
         <div class="card">
-            <h3>Friesian / Holstein Friesian</h3>
-            <p>فریزیئن اور ہولسٹین فریزیئن مویشی۔</p>
+            <div class="icon">🐄</div>
+            <h3>Friesian</h3>
+            <p>Friesian and Holstein Friesian cattle.</p>
         </div>
 
         <div class="card">
+            <div class="icon">🐄</div>
             <h3>Australian Cattle</h3>
-            <p>آسٹریلین نسل کے مویشی۔</p>
+            <p>Australian cattle and selected animals.</p>
         </div>
 
         <div class="card">
+            <div class="icon">🐄</div>
             <h3>Sahiwal</h3>
-            <p>ساہیوال نسل کے معیاری جانور۔</p>
+            <p>Sahiwal breed cattle.</p>
         </div>
 
         <div class="card">
+            <div class="icon">🐂</div>
             <h3>Bulls</h3>
-            <p>مختلف نسلوں کے صحت مند اور مضبوط بیل۔</p>
+            <p>Healthy and strong bulls of different breeds.</p>
         </div>
 
         <div class="card">
+            <div class="icon">🐃</div>
             <h3>Buffalo</h3>
-            <p>نیلی راوی، کنڈی اور دیگر بھینسیں۔</p>
+            <p>Nili-Ravi, Kundhi and other buffalo breeds.</p>
         </div>
 
     </div>
+
 </section>
+
 
 <section id="feed">
-    <h2 class="section-title">Ali Animal Feed</h2>
+
+    <h2 class="section-title">Animal Feed</h2>
 
     <div class="cards">
 
         <div class="card">
-            <h3>Wanda Ali Calf Starter</h3>
+            <div class="icon">🌾</div>
+            <h3>Calf Starter</h3>
             <p>
-                بچھڑوں کی ابتدائی نشوونما کے لیے معیاری Calf Starter۔
+                Quality starter feed for young calves and early growth.
             </p>
         </div>
 
         <div class="card">
-            <h3>Wanda Ali Goat Kids Starter</h3>
+            <div class="icon">🌾</div>
+            <h3>Goat Kids Starter</h3>
             <p>
-                بکری کے بچوں کی بہتر نشوونما کے لیے Goat Kids Starter۔
+                Starter feed for goat kids and healthy early development.
             </p>
         </div>
 
     </div>
+
 </section>
+
+
+<section class="about" id="about">
+
+    <h2 class="section-title">About Us</h2>
+
+    <p>
+        Ali Cattle and Goat Farms is focused on healthy livestock,
+        quality animal feed and reliable livestock services.
+        We deal in goats, bakray, cows, bulls, buffalo and different breeds.
+    </p>
+
+</section>
+
 
 <section class="contact" id="contact">
+
     <h2>Contact Ali Cattle and Goat Farms</h2>
 
-    <p>جانوروں اور خوراک کے بارے میں معلومات کے لیے رابطہ کریں۔</p>
+    <p>
+        For animals, feed and livestock information, contact us.
+    </p>
 
     <div class="buttons">
-        <a class="btn whatsapp" href="https://wa.me/923002098270">
-            WhatsApp
+
+        <a class="btn whatsapp"
+        href="https://wa.me/923002098270">
+        WhatsApp
         </a>
 
-        <a class="btn call" href="tel:+923002098270">
-            Call Now
+        <a class="btn call"
+        href="tel:+923002098270">
+        Call Now
         </a>
+
     </div>
+
 </section>
 
+
 <footer>
+
     © 2026 Ali Cattle and Goat Farms — All Rights Reserved
+
 </footer>
 
 </body>
