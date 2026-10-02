@@ -4,18 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ali Cattle and Goat Farms | Quality Livestock & Animal Feed</title>
+<title>Ali Cattle and Goat Farms</title>
 
-<meta name="description"
-content="Ali Cattle and Goat Farms - Goats, cattle, buffalo, bulls, animal feed, Calf Starter, Goat Kids Starter, Ali Wanda and Mineral Mixture.">
+<meta name="description" content="Ali Cattle and Goat Farms - Premium livestock, goats, cattle, buffalo, bulls, animal feed and livestock services.">
 
 <style>
+
+/* =========================
+   GLOBAL
+========================= */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
 }
 
 html{
@@ -23,391 +25,734 @@ html{
 }
 
 body{
-    background:#f4f8f5;
-    color:#17231c;
-    line-height:1.6;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f8f6;
+    color:#173b2a;
+    overflow-x:hidden;
 }
 
-/* TOP HEADER */
+img{
+    max-width:100%;
+}
+
+a{
+    text-decoration:none;
+}
+
+
+/* =========================
+   HEADER
+========================= */
 
 header{
-    background:
-    linear-gradient(135deg,#063b24,#087a45,#0b5f37);
-    color:white;
-    text-align:center;
-    padding:32px 18px;
-    box-shadow:0 4px 20px rgba(0,0,0,.20);
-}
-
-header h1{
-    font-size:34px;
-    letter-spacing:.5px;
-    margin-bottom:7px;
-}
-
-header p{
-    font-size:15px;
-    opacity:.92;
-}
-
-/* NAVIGATION */
-
-nav{
     position:sticky;
     top:0;
-    z-index:999;
-    background:rgba(3,39,24,.97);
-    padding:14px 8px;
-    text-align:center;
-    box-shadow:0 4px 18px rgba(0,0,0,.18);
-}
-
-nav a{
-    color:#fff;
-    text-decoration:none;
-    margin:0 9px;
-    font-size:14px;
-    font-weight:bold;
-    transition:.25s;
-}
-
-nav a:hover{
-    color:#a9f2c8;
-}
-
-/* HERO */
-
-.hero{
-    min-height:620px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:40px 18px;
+    z-index:9999;
 
     background:
     linear-gradient(
-        rgba(0,35,20,.48),
-        rgba(0,35,20,.58)
-    ),
-    url("https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=2400&q=95");
+        135deg,
+        #032d1a,
+        #07552f,
+        #0b7d45,
+        #07552f
+    );
 
-    background-size:cover;
-    background-position:center;
-    background-attachment:scroll;
-}
-
-.hero-box{
-    max-width:900px;
-    padding:45px 35px;
-    border-radius:25px;
-
-    background:rgba(3,42,25,.72);
-
-    border:1px solid rgba(255,255,255,.25);
+    border-bottom:1px solid rgba(255,255,255,.2);
 
     box-shadow:
-    0 20px 60px rgba(0,0,0,.35),
-    inset 0 1px 1px rgba(255,255,255,.20);
-
-    backdrop-filter:blur(5px);
+    0 8px 30px rgba(0,0,0,.22);
 }
 
-.hero h2{
+.header-inner{
+    max-width:1400px;
+    margin:auto;
+    min-height:78px;
+
+    padding:12px 5%;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+}
+
+.logo{
     color:white;
-    font-size:46px;
-    margin-bottom:16px;
-    text-shadow:0 3px 15px rgba(0,0,0,.45);
+    font-size:24px;
+    font-weight:800;
+    letter-spacing:.3px;
+    white-space:nowrap;
+}
+
+.logo span{
+    color:#d9b85f;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:white;
+    font-size:14px;
+    font-weight:700;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#e2c66e;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:760px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:100px 20px;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(1,35,20,.88),
+        rgba(2,65,35,.52),
+        rgba(1,35,20,.72)
+    ),
+    url("images/cattle.jpg")
+    center/cover no-repeat;
+
+    position:relative;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(
+        circle at center,
+        transparent 20%,
+        rgba(0,0,0,.35) 100%
+    );
+
+    pointer-events:none;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:1050px;
+    color:white;
+}
+
+.hero-badge{
+    display:inline-block;
+
+    padding:9px 20px;
+    margin-bottom:22px;
+
+    border:1px solid rgba(255,255,255,.4);
+    border-radius:50px;
+
+    background:rgba(255,255,255,.10);
+    backdrop-filter:blur(12px);
+
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.hero h1{
+    font-size:clamp(42px,7vw,82px);
+    line-height:1.05;
+    font-weight:900;
+
+    margin-bottom:25px;
+
+    text-shadow:
+    0 5px 25px rgba(0,0,0,.55);
+}
+
+.hero h1 span{
+    color:#e2c66e;
 }
 
 .hero p{
-    color:#f3fff7;
-    font-size:19px;
-    max-width:750px;
-    margin:auto;
+    max-width:780px;
+    margin:0 auto 35px;
+
+    font-size:20px;
+    line-height:1.7;
+
+    color:#f1f7f3;
 }
 
-/* BUTTONS */
-
-.buttons{
-    margin-top:30px;
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:16px;
 }
 
 .btn{
-    display:inline-block;
-    padding:14px 27px;
-    margin:5px;
-    border-radius:10px;
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-    transition:.25s;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    min-width:160px;
+
+    padding:15px 27px;
+
+    border-radius:50px;
+
+    font-size:16px;
+    font-weight:800;
+
+    transition:.3s;
 
     box-shadow:
-    0 8px 20px rgba(0,0,0,.20),
-    inset 0 1px 1px rgba(255,255,255,.25);
+    0 10px 25px rgba(0,0,0,.22);
 }
 
 .btn:hover{
-    transform:translateY(-3px);
+    transform:translateY(-4px);
 }
 
-.whatsapp{
-    background:linear-gradient(135deg,#10b957,#087d3b);
+.btn-whatsapp{
+    background:#25d366;
+    color:white;
 }
 
-.call{
-    background:linear-gradient(135deg,#087a45,#034c2b);
+.btn-call{
+    background:white;
+    color:#07552f;
 }
 
-/* SECTIONS */
+.btn-gold{
+    background:linear-gradient(135deg,#c69b32,#efd47a,#b98a25);
+    color:#18320f;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
 
 section{
-    max-width:1250px;
-    margin:auto;
-    padding:75px 20px;
+    padding:90px 5%;
 }
 
-.section-title{
+.container{
+    max-width:1250px;
+    margin:auto;
+}
+
+.section-heading{
     text-align:center;
-    color:#075c35;
-    font-size:34px;
+    max-width:800px;
+    margin:0 auto 55px;
+}
+
+.section-heading h2{
+    font-size:clamp(32px,4vw,48px);
+    color:#07552f;
     margin-bottom:12px;
 }
 
-.section-subtitle{
-    text-align:center;
-    max-width:760px;
-    margin:0 auto 40px;
-    color:#607067;
+.section-heading h2::after{
+    content:"";
+    display:block;
+
+    width:75px;
+    height:4px;
+
+    margin:16px auto 0;
+
+    border-radius:10px;
+
+    background:linear-gradient(
+        90deg,
+        #07552f,
+        #d1aa4d,
+        #07552f
+    );
 }
 
-/* CARDS */
+.section-heading p{
+    color:#68776e;
+    font-size:17px;
+}
+
+
+/* =========================
+   GLASS CARDS
+========================= */
 
 .cards{
     display:grid;
     grid-template-columns:
-    repeat(auto-fit,minmax(250px,1fr));
+    repeat(auto-fit,minmax(270px,1fr));
 
-    gap:25px;
+    gap:28px;
 }
 
 .card{
-    background:white;
-    border-radius:20px;
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.98),
+        rgba(244,249,246,.96)
+    );
+
+    border:1px solid rgba(10,100,55,.10);
+
+    border-radius:25px;
+
     overflow:hidden;
 
-    border:1px solid rgba(7,92,53,.08);
+    box-shadow:
+    0 15px 45px rgba(13,70,40,.13);
+
+    transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+}
+
+.card:hover{
+    transform:translateY(-10px);
 
     box-shadow:
-    0 10px 30px rgba(14,45,28,.10);
+    0 25px 55px rgba(13,70,40,.22);
+}
+
+.card-image{
+    height:270px;
+    position:relative;
+    overflow:hidden;
+    background:#dfe9e2;
+}
+
+.card-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+
+    transition:transform .5s ease;
+}
+
+.card:hover .card-image img{
+    transform:scale(1.07);
+}
+
+.card-image::after{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        180deg,
+        transparent 60%,
+        rgba(0,0,0,.30)
+    );
+
+    pointer-events:none;
+}
+
+.card-content{
+    padding:25px;
+}
+
+.card-content h3{
+    color:#07552f;
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+.card-content p{
+    color:#65746c;
+    font-size:16px;
+}
+
+.breed-list{
+    list-style:none;
+    margin-top:14px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+}
+
+.breed-list li{
+    background:#edf6f0;
+    border-radius:10px;
+    padding:8px 10px;
+
+    color:#28553b;
+    font-size:14px;
+    font-weight:700;
+}
+
+
+/* =========================
+   LIGHT SECTIONS
+========================= */
+
+.light-section{
+    background:
+    linear-gradient(
+        135deg,
+        #edf7f1,
+        #f8fbf9
+    );
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(230px,1fr));
+
+    gap:22px;
+}
+
+.feature{
+    padding:30px 25px;
+
+    background:white;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    border:1px solid #e3eee7;
+
+    box-shadow:
+    0 10px 30px rgba(0,60,30,.09);
 
     transition:.3s;
 }
 
-.card:hover{
-    transform:translateY(-8px);
-
-    box-shadow:
-    0 18px 40px rgba(14,45,28,.18);
+.feature:hover{
+    transform:translateY(-7px);
 }
 
-.card-image{
-    width:100%;
-    height:250px;
-    object-fit:cover;
-    display:block;
+.feature-icon{
+    width:60px;
+    height:60px;
 
-    image-rendering:auto;
+    margin:0 auto 18px;
 
-    transition:.4s;
-}
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-.card:hover .card-image{
-    transform:scale(1.04);
-}
-
-.image-wrap{
-    overflow:hidden;
-}
-
-.card-content{
-    padding:23px 20px 25px;
-    text-align:center;
-}
-
-.card h3{
-    color:#075c35;
-    font-size:20px;
-    margin-bottom:9px;
-}
-
-.card p{
-    color:#66746c;
-    font-size:14px;
-}
-
-/* FEATURE STRIP */
-
-.features{
-    background:
-    linear-gradient(135deg,#e9f7ee,#ffffff);
-    max-width:none;
-}
-
-.feature-inner{
-    max-width:1200px;
-    margin:auto;
-}
-
-.feature-boxes{
-    display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-}
-
-.feature{
-    background:white;
-    padding:28px 20px;
-    text-align:center;
     border-radius:18px;
 
-    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    background:
+    linear-gradient(
+        135deg,
+        #07552f,
+        #13a05c
+    );
 
-    border-top:4px solid #087a45;
+    color:white;
+
+    font-size:25px;
+    font-weight:900;
 }
 
 .feature h3{
-    color:#075c35;
+    color:#07552f;
     margin-bottom:8px;
 }
 
 .feature p{
-    color:#66746c;
-    font-size:14px;
+    color:#68776e;
 }
 
-/* TREATMENT */
 
-.treatment{
-    background:#f7faf8;
+/* =========================
+   FEED
+========================= */
+
+.feed-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(230px,1fr));
+
+    gap:24px;
 }
 
-.treatment-card{
+.feed-card{
     background:white;
-    border-radius:20px;
-    padding:30px;
 
-    box-shadow:0 10px 30px rgba(0,0,0,.09);
+    padding:30px 25px;
 
-    border-left:5px solid #087a45;
+    border-radius:22px;
+
+    border:1px solid #e2ece5;
+
+    box-shadow:
+    0 12px 32px rgba(0,60,30,.10);
+
+    transition:.3s;
 }
 
-.treatment-card h3{
-    color:#075c35;
-    font-size:23px;
+.feed-card:hover{
+    transform:translateY(-7px);
+}
+
+.feed-card h3{
+    color:#07552f;
+    font-size:22px;
     margin-bottom:10px;
 }
 
-.treatment-card p{
-    color:#5e6c64;
+.feed-card p{
+    color:#68776e;
 }
 
-/* FEED */
 
-.feed{
+/* =========================
+   TREATMENT
+========================= */
+
+.treatment-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+    gap:28px;
+}
+
+.treatment-card{
+    padding:35px;
+
+    border-radius:25px;
+
+    color:white;
+
+    box-shadow:
+    0 18px 40px rgba(0,0,0,.16);
+}
+
+.treatment-card:first-child{
     background:
-    linear-gradient(135deg,#edf8ef,#ffffff);
-    max-width:none;
+    linear-gradient(
+        135deg,
+        #07552f,
+        #13a05c
+    );
 }
 
-.feed-inner{
-    max-width:1250px;
-    margin:auto;
+.treatment-card:last-child{
+    background:
+    linear-gradient(
+        135deg,
+        #174f38,
+        #287c55
+    );
 }
 
-/* ABOUT */
-
-.about{
-    background:white;
-    max-width:none;
-    text-align:center;
+.treatment-card h3{
+    font-size:28px;
+    margin-bottom:14px;
 }
 
-.about-inner{
-    max-width:850px;
-    margin:auto;
+.treatment-card p{
+    color:#edf8f1;
+    line-height:1.8;
 }
 
-.about p{
-    color:#5f6d65;
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-box{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    gap:45px;
+
+    align-items:center;
+}
+
+.about-text h2{
+    color:#07552f;
+    font-size:42px;
+    margin-bottom:18px;
+}
+
+.about-text p{
+    color:#65746c;
     font-size:17px;
     line-height:1.9;
 }
 
-/* CONTACT */
+.about-panel{
+    padding:40px;
+
+    border-radius:28px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #063d24,
+        #0b7d45
+    );
+
+    color:white;
+
+    box-shadow:
+    0 20px 45px rgba(0,50,25,.20);
+}
+
+.about-panel h3{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.about-panel p{
+    line-height:1.8;
+    color:#e8f4ec;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
 
 .contact{
-    max-width:none;
-    background:
-    linear-gradient(135deg,#063b24,#087a45,#06482b);
-    color:white;
+    padding-top:30px;
+}
+
+.contact-box{
+    padding:60px 30px;
+
+    border-radius:30px;
+
     text-align:center;
+
+    color:white;
+
+    background:
+    linear-gradient(
+        135deg,
+        #032d1a,
+        #07552f,
+        #0c8b4d
+    );
+
+    box-shadow:
+    0 20px 50px rgba(0,50,25,.25);
 }
 
-.contact h2{
-    font-size:32px;
-    margin-bottom:12px;
+.contact-box h2{
+    font-size:clamp(32px,5vw,48px);
+    margin-bottom:15px;
 }
 
-.contact p{
-    font-size:16px;
-    opacity:.92;
+.contact-box p{
+    color:#e7f5ec;
+    font-size:18px;
+    margin-bottom:22px;
 }
 
-/* FOOTER */
+.phone{
+    font-size:25px !important;
+    font-weight:900;
+    color:#e2c66e !important;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
-    background:#032d1b;
+    background:#031f13;
     color:white;
+
     text-align:center;
-    padding:25px 15px;
-    font-size:13px;
+
+    padding:35px 20px;
 }
 
 footer strong{
-    color:#9df0bd;
+    color:#dfbf62;
 }
 
-/* MOBILE */
+.footer-small{
+    margin-top:8px;
+    color:#a9c1b3;
+    font-size:14px;
+}
 
-@media(max-width:700px){
 
-    header h1{
-        font-size:25px;
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+    .header-inner{
+        flex-direction:column;
+        padding:18px 4%;
     }
 
     nav{
-        padding:10px 4px;
-    }
-
-    nav a{
-        display:inline-block;
-        margin:4px 6px;
-        font-size:13px;
+        gap:12px;
     }
 
     .hero{
-        min-height:560px;
+        min-height:650px;
     }
 
-    .hero-box{
-        padding:32px 18px;
+    .about-box{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    .logo{
+        font-size:20px;
+        text-align:center;
     }
 
-    .hero h2{
-        font-size:31px;
+    nav a{
+        font-size:12px;
+    }
+
+    .hero{
+        min-height:600px;
+        padding:80px 18px;
+    }
+
+    .hero h1{
+        font-size:42px;
     }
 
     .hero p{
@@ -415,17 +760,28 @@ footer strong{
     }
 
     section{
-        padding:55px 15px;
+        padding:65px 5%;
     }
 
-    .section-title{
-        font-size:28px;
+    .breed-list{
+        grid-template-columns:1fr;
     }
 
     .card-image{
         height:230px;
     }
 
+    .about-text h2{
+        font-size:32px;
+    }
+
+    .contact-box{
+        padding:45px 20px;
+    }
+
+    .phone{
+        font-size:20px !important;
+    }
 }
 
 </style>
@@ -435,67 +791,77 @@ footer strong{
 <body>
 
 
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
 
-<h1>Ali Cattle and Goat Farms</h1>
+<div class="header-inner">
 
-<p>
-Healthy Animals • Quality Feed • Trusted Service
-</p>
+<div class="logo">
+Ali Cattle and Goat <span>Farms</span>
+</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#goats">Goats</a>
+<a href="#cattle">Cattle</a>
+<a href="#buffalo">Buffalo</a>
+<a href="#bulls">Bulls</a>
+<a href="#feed">Feed</a>
+<a href="#treatment">Treatment</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</div>
 
 </header>
 
 
-<nav>
-
-<a href="#home">Home</a>
-
-<a href="#goats">Goats</a>
-
-<a href="#cattle">Cattle</a>
-
-<a href="#buffalo">Buffalo</a>
-
-<a href="#bulls">Bulls</a>
-
-<a href="#treatment">Treatment</a>
-
-<a href="#feed">Feed</a>
-
-<a href="#services">Services</a>
-
-<a href="#contact">Contact</a>
-
-</nav>
-
-
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero" id="home">
 
-<div class="hero-box">
+<div class="hero-content">
 
-<h2>
-Ali Cattle and Goat Farms
-</h2>
+<div class="hero-badge">
+PREMIUM LIVESTOCK & FARM SERVICES
+</div>
+
+<h1>
+Ali Cattle and Goat <span>Farms</span>
+</h1>
 
 <p>
-Quality livestock, healthy animals, professional animal care
-and quality animal feed.
+Quality livestock, animal feed, health information,
+buying and selling services for farmers.
 </p>
 
-<div class="buttons">
+<div class="hero-buttons">
 
-<a class="btn whatsapp"
-href="https://wa.me/923002098270">
+<a
+class="btn btn-whatsapp"
+href="https://wa.me/923002098270"
+target="_blank">
 WhatsApp
 </a>
 
-<a class="btn call"
+<a
+class="btn btn-call"
 href="tel:+923002098270">
 Call Now
 </a>
 
+<a
+class="btn btn-gold"
+href="#services">
+Our Services
+</a>
+
 </div>
 
 </div>
@@ -503,653 +869,32 @@ Call Now
 </section>
 
 
-<!-- FEATURES -->
+<!-- =========================
+     FEATURES
+========================= -->
 
-<section class="features">
+<section>
 
-<div class="feature-inner">
+<div class="container">
 
-<h2 class="section-title">
-Our Farm
-</h2>
+<div class="section-heading">
 
-<p class="section-subtitle">
-Livestock, animal nutrition and practical farm services.
+<h2>Ali Cattle and Goat Farms</h2>
+
+<p>
+Professional livestock solutions for farmers and animal lovers.
 </p>
 
-<div class="feature-boxes">
+</div>
+
+
+<div class="features">
 
 <div class="feature">
 
-<h3>Healthy Livestock</h3>
+<div class="feature-icon">01</div>
 
-<p>
-Selected and carefully managed livestock.
-</p>
-
-</div>
-
-<div class="feature">
-
-<h3>Quality Feed</h3>
-
-<p>
-Animal feed for healthy growth and nutrition.
-</p>
-
-</div>
-
-<div class="feature">
-
-<h3>Animal Care</h3>
-
-<p>
-Practical information for better livestock management.
-</p>
-
-</div>
-
-<div class="feature">
-
-<h3>Trusted Service</h3>
-
-<p>
-Livestock buying, selling and farm information.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- GOATS -->
-
-<section id="goats">
-
-<h2 class="section-title">
-Goats & Bakray
-</h2>
-
-<p class="section-subtitle">
-Different goat breeds and healthy bakray.
-</p>
-
-<div class="cards">
-
-
-<div class="card">
-
-<div class="image-wrap">
-
-<img class="card-image"
-src="https://images.unsplash.com/photo-1524024973431-2ad916746881?auto=format&fit=crop&w=1800&q=95"
-alt="Barbari Goat">
-
-</div>
-
-<div class="card-content">
-
-<h3>Barbari Goats</h3>
-
-<p>
-Barbari breed goats and bakray.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="card">
-
-<div class="image-wrap">
-
-<img class="card-image"
-src="https://images.unsplash.com/photo-1533318087102-b3ad366ed041?auto=format&fit=crop&w=1800&q=95"
-alt="Hasilpuri Goat">
-
-</div>
-
-<div class="card-content">
-
-<h3>Hasilpuri Goats</h3>
-
-<p>
-Healthy Hasilpuri breed animals.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="card">
-
-<div class="image-wrap">
-
-<img class="card-image"
-src="https://images.unsplash.com/photo-1484557985045-edf25e08da73?auto=format&fit=crop&w=1800&q=95"
-alt="Makhi Cheeni Goat">
-
-</div>
-
-<div class="card-content">
-
-<h3>Makhi Cheeni</h3>
-
-<p>
-Makhi Cheeni goats and bakray.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="card">
-
-<div class="image-wrap">
-
-<img class="card-image"
-src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?auto=format&fit=crop&w=1800&q=95"
-alt="Russian Goat">
-
-</div>
-
-<div class="card-content">
-
-<h3>Russian Goats</h3>
-
-<p>
-Selected Russian breed goats.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="card">
-
-<div class="image-wrap">
-
-<img class="card-image"
-src="https://images.unsplash.com/photo-1528502668750-88ba58015b8b?auto=format&fit=crop&w=1800&q=95"
-alt="Teddy Goat">
-
-</div>
-
-<div class="card-content">
-
-<h3>Teddy Goats</h3>
-
-<p>
-Teddy goats and bakray.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="card">
-
-<div class="image-wrap">
-
-<img class="card-image"
-src="https://images.unsplash.com/photo-1562390995-4f2f2c0b6a9c?auto=format&fit=crop&w=1800&q=95"
-alt="Rajan Puri Goat">
-
-</div>
-
-<div class="card-content">
-
-<h3>Rajan Puri Goats</h3>
-
-<p>
-Rajan Puri breed goats and bakray.
-</p>
-
-</div>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-<!-- CATTLE -->
-
-<section id="cattle">
-
-<h2 class="section-title">
-Cattle
-</h2>
-
-<p class="section-subtitle">
-Selected cattle breeds for dairy and livestock farming.
-</p>
-
-<div class="cards">
-
-
-<div class="card">
-
-<div class="image-wrap">
-
-<img class="card-image"
-src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=1800&q=95"
-alt="Cholistani Cattle">
-
-</div>
-
-<div class="card-content">
-
-<h3>Cholistani Cows</h3>
-
-<p>
-Cholistani cows and selected cattle.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="card">
-
-<div class="image-wrap">
-
-<img class="card-image"
-src="https://images.unsplash.com/photo-1527153857715-3908f4dac7e8?auto=format&fit=crop&w=1800&q=95"
-alt="Holstein Friesian Cattle">
-
-</div>
-
-<div class="card-content">
-
-<h3>Friesian / Holstein Friesian</h3>
-
-<p>
-Friesian and Holstein Friesian cattle.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="card">
-
-<div class="image-wrap">
-
-<img class="card-image"
-src="https://images.unsplash.com/photo-1527153857715-3908f4dac7e8?auto=format&fit=crop&w=1800&q=95"
-alt="Australian Cattle">
-
-</div>
-
-<div class="card-content">
-
-<h3>Australian Cattle</h3>
-
-<p>
-Australian cattle and selected animals.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="card">
-
-<div class="image-wrap">
-
-<img class="card-image"
-src="https://images.unsplash.com/photo-1596733430284-f7437764b1a9?auto=format&fit=crop&w=1800&q=95"
-alt="Sahiwal Cow">
-
-</div>
-
-<div class="card-content">
-
-<h3>Sahiwal</h3>
-
-<p>
-Sahiwal breed cattle.
-</p>
-
-</div>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-<!-- BUFFALO -->
-
-<section id="buffalo">
-
-<h2 class="section-title">
-Buffalo
-</h2>
-
-<p class="section-subtitle">
-Nili-Ravi, Kundhi and other buffalo breeds.
-</p>
-
-<div class="cards">
-
-
-<div class="card">
-
-<div class="image-wrap">
-
-<img class="card-image"
-src="https://images.unsplash.com/photo-1546447147-3fc2b8181a0c?auto=format&fit=crop&w=1800&q=95"
-alt="Nili Ravi Buffalo">
-
-</div>
-
-<div class="card-content">
-
-<h3>Nili-Ravi Buffalo</h3>
-
-<p>
-Nili-Ravi buffalo for dairy livestock farming.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="card">
-
-<div class="image-wrap">
-
-<img class="card-image"
-src="https://images.unsplash.com/photo-1556753893-ef3f4f5f9b4f?auto=format&fit=crop&w=1800&q=95"
-alt="Kundhi Buffalo">
-
-</div>
-
-<div class="card-content">
-
-<h3>Kundhi Buffalo</h3>
-
-<p>
-Kundhi buffalo and selected dairy animals.
-</p>
-
-</div>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-<!-- BULLS -->
-
-<section id="bulls">
-
-<h2 class="section-title">
-Bulls
-</h2>
-
-<p class="section-subtitle">
-Strong and healthy bulls of different breeds.
-</p>
-
-<div class="cards">
-
-
-<div class="card">
-
-<div class="image-wrap">
-
-<img class="card-image"
-src="https://images.unsplash.com/photo-1564760055775-d63b17a55c44?auto=format&fit=crop&w=1800&q=95"
-alt="Strong Bull">
-
-</div>
-
-<div class="card-content">
-
-<h3>Farm Bulls</h3>
-
-<p>
-Healthy and strong bulls for livestock farming.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="card">
-
-<div class="image-wrap">
-
-<img class="card-image"
-src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=1800&q=95"
-alt="Cattle Bull">
-
-</div>
-
-<div class="card-content">
-
-<h3>Selected Bulls</h3>
-
-<p>
-Selected animals according to farm requirements.
-</p>
-
-</div>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-<!-- TREATMENT -->
-
-<section class="treatment" id="treatment">
-
-<h2 class="section-title">
-Animal Treatment & Care
-</h2>
-
-<p class="section-subtitle">
-Practical livestock health information and treatment categories.
-</p>
-
-<div class="cards">
-
-
-<div class="treatment-card">
-
-<h3>Desi / Herbal Treatment</h3>
-
-<p>
-Traditional livestock care and herbal remedies
-for common animal problems. Serious illness,
-pregnancy complications or emergency conditions
-should be examined by a qualified veterinarian.
-</p>
-
-</div>
-
-
-<div class="treatment-card">
-
-<h3>Modern Treatment</h3>
-
-<p>
-Modern veterinary treatment information for cattle,
-buffalo, goats and other livestock. Medicine selection
-and dosage should be confirmed according to the animal,
-weight and condition by a qualified veterinarian.
-</p>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-<!-- FEED -->
-
-<section class="feed" id="feed">
-
-<div class="feed-inner">
-
-<h2 class="section-title">
-Animal Feed & Nutrition
-</h2>
-
-<p class="section-subtitle">
-Quality feed products for growing livestock and farm animals.
-</p>
-
-<div class="cards">
-
-
-<div class="card">
-
-<div class="image-wrap">
-
-<img class="card-image"
-src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=1800&q=95"
-alt="Calf Starter Feed">
-
-</div>
-
-<div class="card-content">
-
-<h3>Calf Starter</h3>
-
-<p>
-Starter feed for young calves and early development.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="card">
-
-<div class="image-wrap">
-
-<img class="card-image"
-src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=1800&q=95"
-alt="Goat Kids Starter">
-
-</div>
-
-<div class="card-content">
-
-<h3>Goat Kids Starter</h3>
-
-<p>
-Starter feed for goat kids and healthy early growth.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="card">
-
-<div class="image-wrap">
-
-<img class="card-image"
-src="https://images.unsplash.com/photo-1601598851547-4302969d4f16?auto=format&fit=crop&w=1800&q=95"
-alt="Ali Wanda">
-
-</div>
-
-<div class="card-content">
-
-<h3>Ali Wanda</h3>
-
-<p>
-Quality livestock feed for farm animal nutrition.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="card">
-
-<div class="image-wrap">
-
-<img class="card-image"
-src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?auto=format&fit=crop&w=1800&q=95"
-alt="Mineral Mixture">
-
-</div>
-
-<div class="card-content">
-
-<h3>Mineral Mixture</h3>
-
-<p>
-Mineral nutrition for livestock feeding programs.
-</p>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- SERVICES -->
-
-<section id="services">
-
-<h2 class="section-title">
-Our Livestock Services
-</h2>
-
-<p class="section-subtitle">
-Services and information for livestock farmers.
-</p>
-
-<div class="feature-boxes">
-
-
-<div class="feature">
-
-<h3>Animal Sale</h3>
+<h3>Quality Livestock</h3>
 
 <p>
 Goats, cattle, buffalo and bulls.
@@ -1160,10 +905,13 @@ Goats, cattle, buffalo and bulls.
 
 <div class="feature">
 
-<h3>Animal Purchase</h3>
+<div class="feature-icon">02</div>
+
+<h3>Animal Feed</h3>
 
 <p>
-Livestock purchasing information and assistance.
+Calf Starter, Goat Kids Starter,
+Ali Wanda and Mineral Mixture.
 </p>
 
 </div>
@@ -1171,10 +919,12 @@ Livestock purchasing information and assistance.
 
 <div class="feature">
 
-<h3>Feed Information</h3>
+<div class="feature-icon">03</div>
+
+<h3>Animal Care</h3>
 
 <p>
-Information about livestock feed and nutrition.
+Useful livestock health and management information.
 </p>
 
 </div>
@@ -1182,78 +932,554 @@ Information about livestock feed and nutrition.
 
 <div class="feature">
 
-<h3>Farm Management</h3>
+<div class="feature-icon">04</div>
+
+<h3>Buying & Selling</h3>
 
 <p>
-Practical livestock farming and management guidance.
+Livestock buying and selling services.
 </p>
 
 </div>
 
-
 </div>
-
-</section>
-
-
-<!-- ABOUT -->
-
-<section class="about" id="about">
-
-<div class="about-inner">
-
-<h2 class="section-title">
-About Ali Cattle and Goat Farms
-</h2>
-
-<p>
-
-Ali Cattle and Goat Farms is focused on healthy livestock,
-quality animal feed and practical livestock farming information.
-
-We deal in goats, bakray, cattle, bulls, buffalo and different
-livestock breeds, along with animal nutrition products.
-
-</p>
 
 </div>
 
 </section>
 
 
-<!-- CONTACT -->
+<!-- =========================
+     GOATS
+========================= -->
 
-<section class="contact" id="contact">
+<section id="goats" class="light-section">
 
-<h2>
-Contact Ali Cattle and Goat Farms
-</h2>
+<div class="container">
+
+<div class="section-heading">
+
+<h2>Goats</h2>
 
 <p>
-For livestock, animal feed and farm information, contact us.
+Quality goats for farming, breeding and livestock business.
 </p>
 
-<div class="buttons">
+</div>
 
-<a class="btn whatsapp"
-href="https://wa.me/923002098270">
-WhatsApp
+
+<div class="cards">
+
+<div class="card">
+
+<div class="card-image">
+
+<img
+src="images/goat.jpg"
+alt="Goat"
+loading="lazy"
+>
+
+</div>
+
+<div class="card-content">
+
+<h3>Goat Breeds</h3>
+
+<ul class="breed-list">
+
+<li>Barbari</li>
+<li>Hasilpuri</li>
+<li>Makhi Cheeni</li>
+<li>Russian</li>
+<li>Teddy</li>
+<li>Rajan Puri</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CATTLE
+========================= -->
+
+<section id="cattle">
+
+<div class="container">
+
+<div class="section-heading">
+
+<h2>Cattle</h2>
+
+<p>
+Healthy cattle for dairy farming, breeding and livestock business.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+<div class="card">
+
+<div class="card-image">
+
+<img
+src="images/cattle.jpg"
+alt="Cow and Cattle"
+loading="lazy"
+>
+
+</div>
+
+<div class="card-content">
+
+<h3>Cattle Breeds</h3>
+
+<ul class="breed-list">
+
+<li>Cholistani</li>
+<li>Australian</li>
+<li>Friesian</li>
+<li>Holstein Friesian</li>
+<li>Sahiwal</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     BUFFALO
+========================= -->
+
+<section id="buffalo" class="light-section">
+
+<div class="container">
+
+<div class="section-heading">
+
+<h2>Buffalo</h2>
+
+<p>
+Quality buffalo for dairy farming and breeding.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+<div class="card">
+
+<div class="card-image">
+
+<img
+src="images/buffalo.jpg"
+alt="Buffalo"
+loading="lazy"
+>
+
+</div>
+
+<div class="card-content">
+
+<h3>Buffalo Breeds</h3>
+
+<ul class="breed-list">
+
+<li>Nili-Ravi</li>
+<li>Kundhi</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     BULLS
+========================= -->
+
+<section id="bulls">
+
+<div class="container">
+
+<div class="section-heading">
+
+<h2>Bulls</h2>
+
+<p>
+Healthy bulls for breeding and livestock farming.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+<div class="card">
+
+<div class="card-image">
+
+<img
+src="images/bull.jpg"
+alt="Bull"
+loading="lazy"
+>
+
+</div>
+
+<div class="card-content">
+
+<h3>Quality Bulls</h3>
+
+<p>
+Well-managed bulls for livestock farmers
+and breeding purposes.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FEED
+========================= -->
+
+<section id="feed" class="light-section">
+
+<div class="container">
+
+<div class="section-heading">
+
+<h2>Animal Feed</h2>
+
+<p>
+Quality feed products for livestock nutrition and farm management.
+</p>
+
+</div>
+
+
+<div class="feed-grid">
+
+<div class="feed-card">
+
+<h3>Calf Starter</h3>
+
+<p>
+Starter feed for young calves.
+</p>
+
+</div>
+
+
+<div class="feed-card">
+
+<h3>Goat Kids Starter</h3>
+
+<p>
+Starter feed for young goat kids.
+</p>
+
+</div>
+
+
+<div class="feed-card">
+
+<h3>Ali Wanda</h3>
+
+<p>
+Quality livestock feed for farm animals.
+</p>
+
+</div>
+
+
+<div class="feed-card">
+
+<h3>Mineral Mixture</h3>
+
+<p>
+Mineral nutrition for livestock management.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     TREATMENT
+========================= -->
+
+<section id="treatment">
+
+<div class="container">
+
+<div class="section-heading">
+
+<h2>Animal Treatment</h2>
+
+<p>
+Livestock health information and responsible treatment guidance.
+</p>
+
+</div>
+
+
+<div class="treatment-grid">
+
+<div class="treatment-card">
+
+<h3>Desi / Herbal Treatment</h3>
+
+<p>
+Traditional livestock care and herbal treatment
+information for farmers. Serious illness should
+be assessed by a qualified veterinarian.
+</p>
+
+</div>
+
+
+<div class="treatment-card">
+
+<h3>Modern Treatment</h3>
+
+<p>
+Modern livestock treatment information and
+veterinary guidance. Medicines and injections
+should be used according to professional advice.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section id="services" class="light-section">
+
+<div class="container">
+
+<div class="section-heading">
+
+<h2>Our Services</h2>
+
+<p>
+Practical livestock services for farmers.
+</p>
+
+</div>
+
+
+<div class="features">
+
+<div class="feature">
+
+<div class="feature-icon">01</div>
+
+<h3>Livestock Buying & Selling</h3>
+
+<p>
+Goats, cattle, buffalo and bulls.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">02</div>
+
+<h3>Animal Feed</h3>
+
+<p>
+Calf Starter, Goat Kids Starter,
+Ali Wanda and Mineral Mixture.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">03</div>
+
+<h3>Livestock Guidance</h3>
+
+<p>
+Practical farming and animal-care information.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">04</div>
+
+<h3>Animal Health Information</h3>
+
+<p>
+Desi and modern treatment information
+with veterinary guidance.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section>
+
+<div class="container">
+
+<div class="about-box">
+
+<div class="about-text">
+
+<h2>About Ali Cattle and Goat Farms</h2>
+
+<p>
+Ali Cattle and Goat Farms is focused on livestock,
+animal feed and practical farming information.
+Our platform covers goats, cattle, buffalo,
+bulls, animal nutrition and livestock care.
+</p>
+
+</div>
+
+
+<div class="about-panel">
+
+<h3>For Farmers</h3>
+
+<p>
+Explore livestock categories, feed products,
+animal-care information and farm services.
+For specific medical cases, consult a qualified
+veterinarian.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact" class="contact">
+
+<div class="container">
+
+<div class="contact-box">
+
+<h2>Contact Ali Cattle and Goat Farms</h2>
+
+<p>
+For livestock buying, selling, feed and services
+</p>
+
+<p class="phone">
+03002098270
+</p>
+
+<div class="hero-buttons">
+
+<a
+class="btn btn-whatsapp"
+href="https://wa.me/923002098270"
+target="_blank">
+WhatsApp Us
 </a>
 
-<a class="btn call"
+<a
+class="btn btn-call"
 href="tel:+923002098270">
-Call Now
+Call 03002098270
 </a>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
 
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
+<p>
 © 2026 <strong>Ali Cattle and Goat Farms</strong>
-— All Rights Reserved
+</p>
+
+<p class="footer-small">
+Quality Livestock • Animal Feed • Treatment • Farm Services
+</p>
 
 </footer>
 
